@@ -45,7 +45,8 @@ export default function Booking() {
   const handleCloseModal = () => setShowModal(false);
   const [phoneNamberValid, SetPhoneNamberValid] = useState(true);
   // const [roomId, setRoomId] = useState(null);
-  const [language, setLanguage] = useState("ka");
+  const [language, setLanguage] = useState();
+  console.log("language2", language);
 
   const [user, setUser] = useState({
     service: null,
@@ -57,7 +58,7 @@ export default function Booking() {
   useEffect(() => {
     const language = localStorage.getItem("selectedLanguage");
     setLanguage(language);
-  }, []);
+  });
 
   let name, value;
 
