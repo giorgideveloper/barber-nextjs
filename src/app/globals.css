@@ -12,15 +12,8 @@
 
 body {
   background-color: #101010 !important;
-  font-family: "bgp-arial", sans-serif !important;
+  font-family: "bpgarialcaps", sans-serif !important;
 }
-/* 
-@font-face {
-  font-family: "bpg-arial";
-  font-style: normal;
-  font-weight: 200;
-  src: url("./fonts/bpg-arial-caps-webfont.woff") format("woff");
-} */
 
 @media (min-width: 1400px) {
   .container-xxl,
@@ -275,7 +268,7 @@ form .btn-primary:hover,
   width: 10px;
 }
 
-.booking-form h4 {
+.booking-form h2 {
   color: #fff !important;
 }
 
@@ -298,7 +291,7 @@ form .btn-primary:hover,
   border: 1px solid rgb(3, 85, 161) !important;
 }
 
-h4.solid {
+h2.solid {
   position: relative !important;
   font-size: 22px;
 }
@@ -309,7 +302,7 @@ h4.solid {
   margin-top: 30px !important;
 }
 
-h4::after {
+h2::after {
   content: "";
   position: absolute !important;
   border-bottom: 1px solid #70492f !important;
@@ -335,7 +328,7 @@ h4::after {
   color: rgb(226, 226, 226) !important;
 }
 
-.barber-service h5 {
+.barber-service h3 {
   background-color: #70492f;
   width: 100%;
   color: #fff;
@@ -395,6 +388,7 @@ h4::after {
 
 .form-floating label {
   padding-top: 7px !important;
+  color: #eee;
 }
 
 .form-control {
@@ -476,15 +470,6 @@ h4::after {
   outline: 3px solid #cf814d !important;
 }
 
-/* .barber-checkbox label {
-  background-color: #cf814d;
-  color: #fff;
-  padding: 2px 15px 2px 15px;
-  border-radius: 0.1px !important;
-  border-color: #663f24 !important;
-  width: 100%;
-} */
-
 .barber-checkbox .btn-check:checked + .btn,
 :not(.btn-check) + .btn:active,
 .btn:first-child:active,
@@ -507,7 +492,7 @@ h4::after {
   color: #ffffff56;
 }
 
-.hours-checkbox h4 {
+.hours-checkbox h2 {
   margin-top: 2.5em !important;
   position: relative;
 }
@@ -553,12 +538,6 @@ h4::after {
 .d-inline:hover .tooltiptext {
   display: block !important;
 }
-
-/* .barber-checkbox .btn-check+.btn:hover {
-  color: #fff;
-  background-color: #494542 !important;
-  border-color: #494542 !important;
-} */
 
 .flatpickr-input {
   background-color: #101010;
@@ -796,6 +775,16 @@ form button {
 
 .rbc-agenda-table td {
   cursor: pointer !important;
+}
+
+.btn-focusable {
+  color: #fff !important;
+  background-color: #70492E !important;
+}
+
+input[type="checkbox"]:focus-visible, .btn-focusable:focus {
+  outline: 2px solid #0077cc !important;
+  outline-offset: 2px !important;
 }
 
 @media (max-width: 426px) {

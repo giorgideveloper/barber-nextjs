@@ -59,7 +59,7 @@ export default function Hours({ bookings, setFreeHour, time, type, clickBtn }) {
 
   return (
     <div className="mt-3 hours-checkbox  ">
-      <h4 className="solid">{timeTitleLang[language]}</h4>
+      <h2 className="solid">{timeTitleLang[language]}</h2>
       {finalBookings &&
         finalBookings?.map((booking, index) => (
           // eslint-disable-next-line react/jsx-key

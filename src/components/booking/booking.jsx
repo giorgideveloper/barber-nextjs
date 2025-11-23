@@ -46,7 +46,6 @@ export default function Booking() {
   const [phoneNamberValid, SetPhoneNamberValid] = useState(true);
   // const [roomId, setRoomId] = useState(null);
   const [language, setLanguage] = useState();
-  console.log("language2", language);
 
   const [user, setUser] = useState({
     service: null,
@@ -161,7 +160,6 @@ export default function Booking() {
         if (barberId && day && freeHour && user.service) {
           const res = await bookingSmsCode(mobile);
           if (res.status === 201) {
-            console.log(res);
             setShowModal(true);
             toast("success", "სმს კოდი გამოგზავნილია");
           } else {
@@ -212,7 +210,7 @@ export default function Booking() {
     en: "barber_name_eng",
   };
   const propertyName = languageCodeToPropertyName[language] || "";
-  console.log(bookingTitleLang[language]);
+
   return (
     <>
       {loading ? (
@@ -222,7 +220,7 @@ export default function Booking() {
               <section className="booking-section">
                 <div className="container">
                   <div className="row justify-content-end">
-                    <div className="col-md-2 col-3">
+                    <div className="col-4 col-md-2">
                       {" "}
                       <SelectBasicExample getService={getService} />
                     </div>
@@ -254,14 +252,14 @@ export default function Booking() {
               >
                 <div className="barber-checkbox">
                   <div className="row">
-                    <h4 className="solid">{servicetTitleLang[language]}</h4>
+                    <h2 className="solid">{servicetTitleLang[language]}</h2>
                     <BarberService barberService={barberService} data={data} />
                   </div>
                 </div>
 
                 <div className="col-12 col-md-6 mt-3">
                   <div className="row g-2 ">
-                    <h4 className="solid">{barberTitleLang[language]} </h4>
+                    <h2 className="solid">{barberTitleLang[language]} </h2>
 
                     <div className="col-md">
                       <div className="row g-2">
@@ -310,7 +308,7 @@ export default function Booking() {
 
                 <div className="col-12 col-md-6">
                   <div className="row mt-3 ">
-                    <h4 className="solid">{infoTitleLang[language]}</h4>
+                    <h2 className="solid">{infoTitleLang[language]}</h2>
                     <div className="col-md-12">
                       <div className="form-floating ">
                         <input
@@ -372,7 +370,7 @@ export default function Booking() {
                 </div>
                 <div className="row justify-content-center text-center">
                   <div className="col-md-12 col-12 mt-4">
-                    <button type="submit" className="btn ">
+                    <button type="submit" className="btn btn-focusable">
                       {submitTitleLang[language]}
                     </button>
                   </div>

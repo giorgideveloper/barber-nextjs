@@ -80,7 +80,7 @@
 // 	return (
 // 		<div>
 // 			<div className='mt-3 hours-checkbox'>
-// 				<h4 className='solid'>აირჩიე დრო</h4>
+// 				<h2 className='solid'>აირჩიე დრო</h2>
 // 				{finalBookings &&
 // 					finalBookings?.map((booking, index) => (
 // 						// eslint-disable-next-line react/jsx-key

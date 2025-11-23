@@ -27,7 +27,7 @@ function SelectBasicExample({ getService }) {
         value={selectedLanguage}
       >
         <CustomOption value="ka" label="ქარ" flagCode="ge" />
-        <CustomOption value="ru" label="RU" flagCode="ru" />
+        <CustomOption value="ru" label="Рус" flagCode="ru" />
         <CustomOption value="en" label="Eng" flagCode="us" />
       </Form.Select>
     </>

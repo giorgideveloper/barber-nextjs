@@ -5,7 +5,6 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 
 function DisabledTooltip({ booking, index, setFreeHour, type, clickBtn }) {
-  console.log(clickBtn);
   return (
     <OverlayTrigger
       overlay={
