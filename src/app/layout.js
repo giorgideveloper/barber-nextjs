@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import Script from "next/script";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
+import { headers } from "next/headers";
 
 const bpgArialCaps = localFont({
   src: "../fonts/bpg-arial-caps-webfont.woff",
@@ -9,10 +10,16 @@ const bpgArialCaps = localFont({
 });
 
 export default async function RootLayout({ children }) {
+  const headersList = await headers();
+  const host = headersList.get("host");
+  const protocol = headersList.get("x-forwarded-proto") || "https";
+  const pathname = headersList.get("x-current-path") || "/";
+  const canonical = `${protocol}://${host}${pathname}`;
+
   return (
     <html lang="ka" className={bpgArialCaps.className}>
       <head>
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href={canonical} />
       </head>
       <body>
         {children}
