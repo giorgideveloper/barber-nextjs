@@ -19,6 +19,9 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="ka" className={bpgArialCaps.className}>
       <head>
+        <meta name="theme-color" content="#70492E" />
+        <meta name="msapplication-TileColor" content="#70492E" />
+        <link rel="shortcut icon" href="/barber.png" type="image/x-icon" />
         <link rel="canonical" href={canonical} />
       </head>
       <body>
