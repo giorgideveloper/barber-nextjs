@@ -9,10 +9,27 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div>
+    <>
       <main>
         <Booking />
       </main>
-    </div>
+      <footer className="container pb-4">
+        <div className="row">
+          <div className="col-12">
+            <p className="mb-0 text-center text-white">
+              Created by{" "}
+              <a
+                className="text-warning"
+                href="https://lumos.com.ge"
+                target="_target"
+                rel="nofollow"
+              >
+                Lumos Development
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
